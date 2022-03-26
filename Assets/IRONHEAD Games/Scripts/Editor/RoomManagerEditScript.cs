@@ -12,8 +12,12 @@ public class RoomManagerEditScript : Editor
         EditorGUILayout.HelpBox("This script is responsible for creating and joining rooms", MessageType.Info);
 
         RoomManager roomManager = (RoomManager) target;
-        if(GUILayout.Button("Join Random Button")){
-            roomManager.JoinRandomRoom();
+
+        if(GUILayout.Button("Join School Room")){
+            roomManager.OnEnterButtonClicked_School();
+        }
+        if(GUILayout.Button("Join Outdoor Room")){
+            roomManager.OnEnterButtonClicked_Outdoor();
         }
     }
 }
