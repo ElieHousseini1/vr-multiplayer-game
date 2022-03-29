@@ -3,8 +3,12 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
+<<<<<<< HEAD
   tags:
   - Floor
+=======
+  tags: []
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
   layers:
   - Default
   - TransparentFX
@@ -17,7 +21,11 @@ TagManager:
   - Teleport
   - Interactable
   - Player
+<<<<<<< HEAD
   - InHand
+=======
+  - 
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
   - 
   - 
   - 

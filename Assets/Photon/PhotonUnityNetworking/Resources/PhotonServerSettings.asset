@@ -39,8 +39,11 @@ MonoBehaviour:
   - DestroySpaceship
   - Fire
   - RespawnSpaceship
+<<<<<<< HEAD
   - StartNetworkGrabbing
   - StopNetworkGrabbing
+=======
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

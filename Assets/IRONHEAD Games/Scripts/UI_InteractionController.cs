@@ -20,9 +20,15 @@ public class UI_InteractionController : MonoBehaviour
     bool isUICanvasActive = false;
 
     [SerializeField]
+<<<<<<< HEAD
     GameObject UIGameObjets;
 
 
+=======
+    GameObject UICanvasGameobject;
+
+  
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
     private void OnEnable()
     {
         inputActionReference_UISwitcher.action.performed += ActivateUIMode;
@@ -36,9 +42,15 @@ public class UI_InteractionController : MonoBehaviour
     private void Start()
     {
         //Deactivating UI Canvas Gameobject by default
+<<<<<<< HEAD
         if (UIGameObjets !=null)
         {
             UIGameObjets.SetActive(false);
+=======
+        if (UICanvasGameobject !=null)
+        {
+            UICanvasGameobject.SetActive(false);
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
 
         }
 
@@ -65,10 +77,17 @@ public class UI_InteractionController : MonoBehaviour
             //Deactivating Base Controller by disabling its XR Direct Interactor
             BaseController.GetComponent<XRDirectInteractor>().enabled = false;
 
+<<<<<<< HEAD
 
 
             //Activating the UI Canvas Gameobject
             UIGameObjets.SetActive(true);
+=======
+          
+
+            //Activating the UI Canvas Gameobject
+            UICanvasGameobject.SetActive(true);
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
         }
         else
         {
@@ -82,7 +101,11 @@ public class UI_InteractionController : MonoBehaviour
             BaseController.GetComponent<XRDirectInteractor>().enabled = true;
 
             //De-Activating the UI Canvas Gameobject
+<<<<<<< HEAD
             UIGameObjets.SetActive(false);
+=======
+            UICanvasGameobject.SetActive(false);
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
         }
 
     }

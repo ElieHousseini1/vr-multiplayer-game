@@ -8,9 +8,12 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
 {
     PhotonView m_photonView;
 
+<<<<<<< HEAD
     Rigidbody rb;
     bool isBeingHeld = false;
 
+=======
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
     private void Awake(){
         m_photonView = GetComponent<PhotonView>();
     }
@@ -18,12 +21,17 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
     // Start is called before the first frame update
     void Start()
     {
+<<<<<<< HEAD
         rb = GetComponent<Rigidbody>();
+=======
+
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
     }
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         if(isBeingHeld){
             // Object is being grabbed
             rb.isKinematic = true;
@@ -33,6 +41,9 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
             rb.isKinematic = false;
             gameObject.layer = 9;
         }
+=======
+
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
     }
 
     private void TransferOwnership(){
@@ -41,6 +52,7 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
 
     public void OnSelectEntered(){
         Debug.Log("Grabbed");
+<<<<<<< HEAD
         m_photonView.RPC("StartNetworkGrabbing", RpcTarget.AllBuffered);
 
         if(m_photonView.Owner == PhotonNetwork.LocalPlayer){
@@ -52,15 +64,24 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
     public void onSelectExited(){
         Debug.Log("Released");
         m_photonView.RPC("StopNetworkGrabbing", RpcTarget.AllBuffered);
+=======
+        TransferOwnership();
+    }
+    public void onSelectExited(){
+        Debug.Log("Released");
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
     }
 
     public void OnOwnershipRequest(PhotonView targetView, Player requestingPlayer)
     {
+<<<<<<< HEAD
 
         if(targetView != m_photonView){
             return;
         }
 
+=======
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
         Debug.Log("Ownership Requested for: " + targetView.name + " from " + requestingPlayer.NickName);
         m_photonView.TransferOwnership(requestingPlayer);
     }
@@ -74,6 +95,7 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
     {
 
     }
+<<<<<<< HEAD
 
     [PunRPC]
     public void StartNetworkGrabbing(){
@@ -84,4 +106,6 @@ public class NetworkedGrabbing : MonoBehaviourPunCallbacks, IPunOwnershipCallbac
         isBeingHeld = false;
     }
 
+=======
+>>>>>>> 5be909e4ff33c30cca1ed4eff100ded4c235ad98
 }
